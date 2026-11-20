@@ -43,7 +43,7 @@ evidence of the earlier run (32 statements) is kept in `lean/logs/superseded/`.
 | **Comparator passed** | **yes, unsandboxed only**, all 70 statements. bubblewrap is not installed in the workspace, so every Comparator run used `--inadvisably-no-sandbox`. No sandboxed Comparator run has happened. |
 | **Independent kernel checks passed** | **not fully**; see the table below |
 | **Locally prepared for submission** | **no**. There is no remote and no commit. No sandboxed run has been made on the commit to be submitted. The CONFIRM fields of `formalization.yaml` are unconfirmed. |
-| **Registered by Palomar** | **no**. Nothing had been pushed or submitted when this report was written. Update, 20 November 2026: submitted as `p5uwkylf4s8p` (commit `5037400`, branch `palomar`); Palomar's sandboxed verification [completed successfully](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); the automated review is pending. |
+| **Registered by Palomar** | **yes** (since 20 November 2026). Nothing had been pushed or submitted when this report was written. Update, 20 November 2026: submitted as `p5uwkylf4s8p` (commit `5037400`, branch `palomar`); Palomar's sandboxed verification [completed successfully](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); the automated review identified no problems; registered as [PALOMAR-2026-11-20-000009 v1](https://palomar-registry.org/entry?id=PALOMAR-2026-11-20-000009&version=1). |
 
 Results of the independent kernel checks:
 

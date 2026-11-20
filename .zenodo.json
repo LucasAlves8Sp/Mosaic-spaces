@@ -34,6 +34,11 @@
       "identifier": "https://aixiv.online/abs/2611.02025",
       "relation": "isIdenticalTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "https://palomar-registry.org/entry?id=PALOMAR-2026-11-20-000009&version=1",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
     }
   ]
 }

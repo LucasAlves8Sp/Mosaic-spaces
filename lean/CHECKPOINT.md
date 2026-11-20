@@ -21,7 +21,8 @@ and `Classical.choice`. `Challenge.lean` contains 70 statements, and Comparator 
   https://github.com/LucasAlves8Sp/Mosaic-spaces on 2026-11-20 (branch `main`: paper and `lean/`;
   branch `palomar`: the Lean project at the root, for submission). It was submitted to Palomar
   as `p5uwkylf4s8p`; Palomar's sandboxed mechanical verification completed successfully
-  (https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); the automated review is pending. It is not registered by Palomar.
+  (https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); the automated review identified no problems. It was registered by Palomar on 2026-11-20 as
+  PALOMAR-2026-11-20-000009 v1 (https://palomar-registry.org/entry?id=PALOMAR-2026-11-20-000009&version=1).
 
 ## What exists
 
