@@ -1,0 +1,56 @@
+# CI for the Mosaic spaces formalization. The action pins are those used by the author's earlier
+# Palomar project (LucasAlves8Sp/...Regular-Subcontinua), where this workflow layout ran.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Static checks, build, axiom audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Static source checks (runs no project code)
+        run: python3 scripts/check_sources.py .
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          build: true
+      - name: Build the statement file
+        run: lake build Challenge
+      - name: Axiom audit
+        run: |
+          lake env lean scripts/axioms.lean > axioms.log 2>&1
+          python3 scripts/check_axioms.py < axioms.log
+  comparator:
+    name: Comparator (sandboxed), paranoid kernel replay
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
+        with:
+          build: false
+      - name: Install bubblewrap for the sandbox
+        run: |
+          sudo apt-get update -qq >/dev/null
+          sudo apt-get install -y -qq bubblewrap >/dev/null
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+      - name: Run every verification step (sandboxed)
+        run: bash scripts/verify_all.sh
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: verification-logs
+          path: logs/

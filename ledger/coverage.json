@@ -1,0 +1,1540 @@
+{
+ "article": "article/mosaic_article.tex",
+ "external": {
+  "EXT-HM": "Hahn-Mazurkiewicz: a Peano continuum is the image of a path (Willard Sect. 31; Engelking 6.3). Not in Mathlib v4.35.0.",
+  "EXT-HMC": "Converse: a Hausdorff continuous image of [0,1] is locally connected (closed quotient of a locally connected space). Short; provable from Mathlib.",
+  "EXT-PLPC": "A compact, locally connected, metrizable space is locally path connected (Mazurkiewicz-Moore-Menger for compacta; Engelking 6.3). Not in Mathlib v4.35.0.",
+  "EXT-ARC": "A path connected Hausdorff space is arcwise connected (Willard Sect. 31). Not in Mathlib v4.35.0 (no notion of arc at all).",
+  "EXT-ARCLESS": "Existence of a nondegenerate metric continuum containing no arc (pseudo-arc: Knaster 1922, Moise 1948, Bing 1948). Not in Mathlib v4.35.0.",
+  "EXT-MMM": "Mazurkiewicz-Moore-Menger: completely metrizable + locally connected => locally arcwise connected (Engelking 6.3). Not in Mathlib v4.35.0.",
+  "EXT-Z": "Existence of a connected, locally connected subset of the plane with more than one point containing no nondegenerate continuum (Curtis 1980 Ex. 1.7; Hocking-Young). Needs a Bernstein decomposition and a plane separation theorem. Not in Mathlib v4.35.0.",
+  "EXT-VD": "van Douwen 1981: existence of the injection lambda, and SHE is regular, Frechet, locally pathwise connected, not path-determined. Cited, not proved, in the article.",
+  "EXT-FST": "Franklin-Smith-Thomas 1979: the space HE and its properties. Cited, not proved, in the article.",
+  "EXT-CURTIS": "Curtis 1980, Example 1.8. Cited; the article explicitly has not verified it."
+ },
+ "rows": [
+  {
+   "id": "I-1",
+   "label": "intro: hierarchy",
+   "lines": "74-76",
+   "stmt": "curve = quasi-curve => m-continuum => mosaic.",
+   "lean": "MosaicSpaces.Paper.cor_2_9_qc, MosaicSpaces.Paper.cor_2_9_2_full; IsCurveSpace.isQuasiCurveSpace, IsMContinuumSpace.isMosaicSpace",
+   "module": "MosaicSpaces.Mosaic, MosaicSpaces.Classes, MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "P-classes2"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "m-continuum => mosaic is a library lemma."
+  },
+  {
+   "id": "I-2",
+   "label": "intro: Q1b hypothesis stronger than Q1a",
+   "lines": "72",
+   "stmt": "Local m-strong connectedness implies local connectedness.",
+   "lean": "MosaicSpaces.Paper.display_2_1 (third conjunct); LocallyMStronglyConnected.locallyConnectedSpace",
+   "module": "MosaicSpaces.Local",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "I-3",
+   "label": "intro: metric spaces and CW complexes are mosaic",
+   "lines": "51",
+   "stmt": "Every Hausdorff sequential space is a mosaic space (CW complexes: illustration only).",
+   "lean": "MosaicSpaces.Paper.prop_2_7_t2; isMosaicSpace_of_t2",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [
+    "P-char"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "CW-complex remark is illustration only."
+  },
+  {
+   "id": "I-4",
+   "label": "Sections 1.3-1.6",
+   "lines": "78-119",
+   "stmt": "Table of answers, attribution, sources, organisation.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "D",
+   "status": "documentation",
+   "note": ""
+  },
+  {
+   "id": "C-1",
+   "label": "conventions: classical facts",
+   "lines": "126",
+   "stmt": "Hahn-Mazurkiewicz; Peano continua are arcwise and locally arcwise connected; compact locally connected metrizable => finitely many components, each open and Peano; nondegenerate Peano continuum contains an arc.",
+   "lean": "MosaicSpaces.Paper.compact_locallyConnected_lpc, MosaicSpaces.Paper.peano_classical, MosaicSpaces.Paper.quasiPeano_components, MosaicSpaces.Paper.arc_theorem",
+   "module": "MosaicSpaces.Peano.LPC, MosaicSpaces.Peano.Consequences, MosaicSpaces.Arc.Param",
+   "deps": [
+    "EXT-HM",
+    "EXT-PLPC",
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "partial",
+   "note": "Proved and compared: compact locally connected metrizable => locally path connected; Peano continua are path connected, arcwise connected, locally path/arcwise connected and contain arcs; quasi-Peano spaces have finitely many open Peano components; the arc theorem. NOT formalized: the Hahn-Mazurkiewicz theorem itself (Hausdorff path image <=> Peano continuum, direction <=). No formalized result depends on it."
+  },
+  {
+   "id": "D-mosaic",
+   "label": "def:mosaic",
+   "lines": "129-133",
+   "stmt": "Mosaic on a set; mosaic topology; mosaic space; m-continuum, quasi-curve, curve space.",
+   "lean": "MosaicSpaces.Paper.def_2_1_mosaic, MosaicSpaces.Paper.def_2_1_mContinuum, MosaicSpaces.Paper.def_2_1_quasiCurve, MosaicSpaces.Paper.def_2_1_curve; IsAbstractMosaic, mosaicTopology, IsAbstractMosaicSpaceWith",
+   "module": "MosaicSpaces.Abstract",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "Abstract Definition 2.1 formalized and shown equivalent to the intrinsic definitions used throughout."
+  },
+  {
+   "id": "D-mosaic-eq",
+   "label": "def:mosaic (fidelity)",
+   "lines": "129-133, 147",
+   "stmt": "A space is the mosaic space of an abstract mosaic of compact metric spaces iff it has a mosaic family of compact metrizable subspaces.",
+   "lean": "MosaicSpaces.Paper.def_2_1_mosaic (and the three variants); isMosaicSpaceWith_iff_abstract",
+   "module": "MosaicSpaces.Abstract",
+   "deps": [
+    "P-basic1"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-recognise",
+   "label": "lem:recognise",
+   "lines": "135-140",
+   "stmt": "Pairwise intersections closed in both with equal induced topologies => mosaic; closed subspaces of a space covering X; T1 spaces with finite pairwise intersections.",
+   "lean": "MosaicSpaces.Paper.lemma_2_2, MosaicSpaces.Paper.lemma_2_2_closed, MosaicSpaces.Paper.lemma_2_2_finite",
+   "module": "MosaicSpaces.Abstract",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "Main statement and both 'in particular' clauses."
+  },
+  {
+   "id": "P-basic1",
+   "label": "prop:basic(1)",
+   "lines": "147,156",
+   "stmt": "Each piece is closed in the mosaic topology, which induces the piece topology.",
+   "lean": "MosaicSpaces.Paper.prop_2_3_1; isClosedEmbedding_val",
+   "module": "MosaicSpaces.Abstract",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "No compact-metric hypothesis needed."
+  },
+  {
+   "id": "P-basic2",
+   "label": "prop:basic(2)",
+   "lines": "148,158",
+   "stmt": "A mosaic space is T1.",
+   "lean": "MosaicSpaces.Paper.prop_2_3_t1; IsMosaicFamily.t1Space, IsMosaicSpace.t1Space",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-basic3",
+   "label": "prop:basic(3)",
+   "lines": "149,158",
+   "stmt": "A map is continuous iff its restrictions to pieces are; the natural map from the sum of the pieces is a quotient map.",
+   "lean": "MosaicSpaces.Paper.prop_2_3_3; IsMosaicFamily.continuous_iff, IsMosaicFamily.isQuotientMap_sigma",
+   "module": "MosaicSpaces.Cone",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-basic-star",
+   "label": "prop:basic (*)",
+   "lines": "164-166",
+   "stmt": "A sequence converging to a point it avoids has a subsequence in one piece converging there to a point outside its range.",
+   "lean": "IsMosaicFamily.exists_subseq_tendsto_in_piece",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [
+    "P-basic2"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Proved without the injectivity hypothesis."
+  },
+  {
+   "id": "P-basic4",
+   "label": "prop:basic(4)",
+   "lines": "150,170,172",
+   "stmt": "If x_k -> x, some piece contains x and x_k for infinitely many k (and the subsequence converges in the piece).",
+   "lean": "MosaicSpaces.Paper.prop_2_3_456 (first conjunct); IsMosaicFamily.exists_piece_subseq",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [
+    "P-basic-star",
+    "P-basic5"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-basic5",
+   "label": "prop:basic(5)",
+   "lines": "151,168",
+   "stmt": "Convergent sequences have unique limits.",
+   "lean": "MosaicSpaces.Paper.prop_2_3_456 (second conjunct); IsMosaicFamily.uniqueSeqLimits",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [
+    "P-basic-star"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-basic6",
+   "label": "prop:basic(6)",
+   "lines": "152,160",
+   "stmt": "A mosaic space is sequential.",
+   "lean": "MosaicSpaces.Paper.prop_2_3_456 (third conjunct); IsMosaicFamily.sequentialSpace",
+   "module": "MosaicSpaces.Mosaic",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-image",
+   "label": "lem:image",
+   "lines": "174-183",
+   "stmt": "In a sequential T1 space with unique sequential limits the continuous image of a compact metrizable space is closed, compact and metrizable.",
+   "lean": "MosaicSpaces.Paper.lemma_2_4; range_closed_compact_metrizable",
+   "module": "MosaicSpaces.Image",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "R-hausimage",
+   "label": "rem:hausimage",
+   "lines": "185-187",
+   "stmt": "Hausdorff continuous image of a compact metrizable space is compact metrizable.",
+   "lean": "MosaicSpaces.Paper.remark_2_5; range_compact_metrizable_of_t2",
+   "module": "MosaicSpaces.Image",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "C-image1",
+   "label": "cor:image(1)",
+   "lines": "192,198",
+   "stmt": "Union of two metric continua with a common point is a metric continuum.",
+   "lean": "MosaicSpaces.Paper.cor_2_6_union; IsMetricContinuum.union",
+   "module": "MosaicSpaces.Continua",
+   "deps": [
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "C-image2a",
+   "label": "cor:image(2), compactness part",
+   "lines": "193,198",
+   "stmt": "The image of a path in a mosaic space is a metric continuum; any two points of a path connected subset lie in a metric continuum inside it.",
+   "lean": "MosaicSpaces.Paper.cor_2_6_2; isMetricContinuum_range_path, IsPathConnected.exists_metricContinuum",
+   "module": "MosaicSpaces.Continua",
+   "deps": [
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "C-image2b",
+   "label": "cor:image(2), Peano/arc part",
+   "lines": "193,198",
+   "stmt": "The image of a path is a Peano continuum; every path connected subset is arcwise connected.",
+   "lean": "MosaicSpaces.Paper.cor_2_6_2, MosaicSpaces.Paper.cor_2_6_2_arc, MosaicSpaces.Paper.arc_theorem; isPeanoContinuum_range_path, isArcBetween_of_joinedIn",
+   "module": "MosaicSpaces.Classes, MosaicSpaces.ArcConsequences, MosaicSpaces.Arc.Param",
+   "deps": [
+    "L-image",
+    "EXT-HMC",
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "C-image3",
+   "label": "cor:image(3)",
+   "lines": "194,198",
+   "stmt": "Metric continua K_n through x, eventually inside every neighbourhood of x: their union is a metric continuum.",
+   "lean": "MosaicSpaces.Paper.cor_2_6_3; isMetricContinuum_iUnion_of_null",
+   "module": "MosaicSpaces.Continua",
+   "deps": [
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-char",
+   "label": "prop:char",
+   "lines": "201-208",
+   "stmt": "Mosaic space <=> sequential with unique sequential limits; Hausdorff sequential spaces are mosaic; open subspaces of mosaic spaces are mosaic.",
+   "lean": "MosaicSpaces.Paper.prop_2_7, MosaicSpaces.Paper.prop_2_7_t2, MosaicSpaces.Paper.prop_2_7_open",
+   "module": "MosaicSpaces.Mosaic, MosaicSpaces.Continua",
+   "deps": [
+    "P-basic5",
+    "P-basic6",
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-generate",
+   "label": "lem:generate",
+   "lines": "212-217",
+   "stmt": "A covering family of compact metrizable subspaces of a mosaic space is a mosaic; it generates the topology iff every convergent sequence has a subsequence lying with its limit in a member.",
+   "lean": "MosaicSpaces.Paper.lemma_2_8; isMosaicFamily_iff_captures",
+   "module": "MosaicSpaces.Classes",
+   "deps": [
+    "L-image",
+    "P-basic4"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-classes1",
+   "label": "cor:classes(1)",
+   "lines": "222,227",
+   "stmt": "m-continuum space <=> every convergent sequence has a subsequence lying with its limit in a metric continuum.",
+   "lean": "MosaicSpaces.Paper.cor_2_9_1; isMContinuumSpace_iff_captures",
+   "module": "MosaicSpaces.Classes",
+   "deps": [
+    "L-generate"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-classes2",
+   "label": "cor:classes(2) (a)<=>(b)<=>(c)",
+   "lines": "223,229",
+   "stmt": "Quasi-curve <=> curve <=> every convergent sequence is captured by a Peano continuum.",
+   "lean": "MosaicSpaces.Paper.cor_2_9_2_full, MosaicSpaces.Paper.cor_2_9_2, MosaicSpaces.Paper.cor_2_9_2_path",
+   "module": "MosaicSpaces.Classes, MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "L-generate"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-classes2d",
+   "label": "cor:classes(2) (c)<=>(d)",
+   "lines": "223,229",
+   "stmt": "... <=> every convergent sequence is captured by the image of a path.",
+   "lean": "MosaicSpaces.Paper.cor_2_9_2_full; IsCurveSpace.capturesPath, IsPeanoContinuum.exists_pathImage_tail",
+   "module": "MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "EXT-HM",
+    "EXT-HMC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": "(c) => (d) is proved WITHOUT Hahn-Mazurkiewicz: a convergent sequence in a Peano continuum has a tail on one path (Peano continua are locally path connected and first countable; Prop. 7.2's construction)."
+  },
+  {
+   "id": "D-pathdet",
+   "label": "path-determined (definition)",
+   "lines": "233",
+   "stmt": "A family determines X; X is path-determined.",
+   "lean": "Determines, IsPathDetermined, ClosedTestedByPaths, IsQuotientOfIntervals (in Challenge.lean); MosaicSpaces.Paper.prop_2_10",
+   "module": "MosaicSpaces.PathDetermined",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-pathdet-abc",
+   "label": "prop:pathdet (a)<=>(b)<=>(c)",
+   "lines": "235-246",
+   "stmt": "For Hausdorff X: path-determined <=> closedness tested by preimages under paths <=> quotient of a sum of intervals.",
+   "lean": "MosaicSpaces.Paper.prop_2_10, MosaicSpaces.Paper.prop_2_10_quotient",
+   "module": "MosaicSpaces.PathDetermined",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "(c) in prop_2_10 indexes the sum by a type in the universe of X; prop_2_10_quotient gives (c) => (b) for any universe."
+  },
+  {
+   "id": "P-pathdet-de",
+   "label": "prop:pathdet (a)<=>(d)<=>(e)",
+   "lines": "235-249",
+   "stmt": "For Hausdorff X: path-determined <=> curve space <=> quasi-curve space.",
+   "lean": "MosaicSpaces.Paper.prop_2_10; IsPathDetermined.isCurveSpace, IsCurveSpace.closedTestedByPaths",
+   "module": "MosaicSpaces.PathDetermined",
+   "deps": [
+    "P-classes2",
+    "EXT-HM",
+    "EXT-HMC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": "(d) => (b) is proved through Corollary 2.9(2)(d) instead of Hahn-Mazurkiewicz."
+  },
+  {
+   "id": "D-local",
+   "label": "def:local",
+   "lines": "252-255",
+   "stmt": "m-strongly connected; locally m-strongly connected, locally connected, locally path connected, locally arcwise connected (open-set forms).",
+   "lean": "MStronglyConnected, LocallyMStronglyConnected, LocallyConnectedOpen, LocallyPathConnectedOpen, IsArcBetween, ArcwiseConnected, LocallyArcwiseConnected, IsArc; locallyConnectedOpen_iff, locallyPathConnectedOpen_iff",
+   "module": "MosaicSpaces.Local",
+   "deps": [],
+   "cls": "A",
+   "status": "proved",
+   "note": "Open-set forms, shown equivalent to Mathlib's classes where these exist."
+  },
+  {
+   "id": "E-localimpl-a",
+   "label": "eq:localimpl (LPC => LmS => LC)",
+   "lines": "257-263",
+   "stmt": "In a mosaic space: locally path connected => locally m-strongly connected => locally connected.",
+   "lean": "MosaicSpaces.Paper.display_2_1",
+   "module": "MosaicSpaces.Local",
+   "deps": [
+    "C-image2a"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "LAC => LPC => LmS => LC."
+  },
+  {
+   "id": "E-localimpl-b",
+   "label": "eq:localimpl (LPC <=> LAC)",
+   "lines": "257-263",
+   "stmt": "In a mosaic space: locally path connected <=> locally arcwise connected.",
+   "lean": "MosaicSpaces.Paper.display_2_1_iff; IsMosaicSpace.locallyArcwiseConnected_iff",
+   "module": "MosaicSpaces.ArcConsequences",
+   "deps": [
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": "LPC <=> LAC in every mosaic space (path images are compact metrizable, hence Hausdorff)."
+  },
+  {
+   "id": "P-lav52",
+   "label": "prop:lav52",
+   "lines": "265-270",
+   "stmt": "If every nonempty open subspace of a mosaic space is an m-continuum space, the space is locally m-strongly connected.",
+   "lean": "MosaicSpaces.Paper.prop_2_12; locallyMStronglyConnected_of_forall_isOpen",
+   "module": "MosaicSpaces.Local",
+   "deps": [
+    "C-image1",
+    "P-classes1"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-qcopen",
+   "label": "prop:qcopen",
+   "lines": "272-277",
+   "stmt": "Every nonempty open subspace of a quasi-curve space is an m-continuum space.",
+   "lean": "MosaicSpaces.Paper.prop_2_13; IsQuasiCurveSpace.isMContinuumSpace_of_isOpen",
+   "module": "MosaicSpaces.Local",
+   "deps": [
+    "P-classes2",
+    "P-classes1"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-lac",
+   "label": "lem:lac",
+   "lines": "281-286",
+   "stmt": "Criterion: path components of open sets are open (and arcwise connected) if sequences in non-locally-connected pieces are eventually in the path component of their limit.",
+   "lean": "MosaicSpaces.Paper.lemma_2_14_article, MosaicSpaces.Paper.lemma_2_14; IsMosaicFamily.lemma_2_14_lc",
+   "module": "MosaicSpaces.Peano.Consequences, MosaicSpaces.ArcConsequences",
+   "deps": [
+    "P-basic4",
+    "EXT-PLPC",
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": "Article's hypothesis (pieces not locally connected) and conclusion (open, arcwise connected path components; LAC)."
+  },
+  {
+   "id": "C-qclac",
+   "label": "cor:qclac",
+   "lines": "288-294",
+   "stmt": "Every quasi-curve space is locally arcwise connected, hence locally m-strongly connected.",
+   "lean": "MosaicSpaces.Paper.cor_2_15; IsQuasiCurveSpace.cor_2_15",
+   "module": "MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "L-lac",
+    "EXT-PLPC",
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "K-exist",
+   "label": "fixed continuum K",
+   "lines": "302-304",
+   "stmt": "A nondegenerate metric continuum K without arcs exists; compatible metric with rho(a,b)=diam K=1; K minus {a,b} nonempty.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "EXT-ARCLESS"
+   ],
+   "cls": "B",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "Cn-plus",
+   "label": "con:plus",
+   "lines": "306-311",
+   "stmt": "Y+ = Y with a copy of K attached along every ordered pair of distinct points; edges E_e with metric rho_e.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "A-obs",
+   "label": "app:glue Observation",
+   "lines": "818",
+   "stmt": "An elementary pair with one point in the interior of an edge lies in that edge.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "A-claim1",
+   "label": "app:glue Claim 1",
+   "lines": "820-822",
+   "stmt": "Chains between points of Y cost at least d.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "A-obs"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "A-claim2",
+   "label": "app:glue Claim 2",
+   "lines": "824",
+   "stmt": "Chains between points of an edge cost at least rho_e.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "A-claim1"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "A-claim3",
+   "label": "app:glue Claim 3",
+   "lines": "826",
+   "stmt": "Chains from an interior edge point to outside the open edge cost at least r(u).",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "A-obs"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "L-plus",
+   "label": "lem:plus",
+   "lines": "313-321, 816-828",
+   "stmt": "d+ is a metric on Y+ extending d and each rho_e, with separation (3); Y closed, open edges open, edges homeomorphic to K.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "A-claim1",
+    "A-claim2",
+    "A-claim3"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "Cn-EY",
+   "label": "con:EY",
+   "lines": "323-325",
+   "stmt": "E(Y) = union of the tower X_0 = Y, X_{n+1} = X_n^+, with the union metric.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "L-plus"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless0",
+   "label": "thm:arcless, preliminaries",
+   "lines": "339",
+   "stmt": "Each stage X_n is closed in E(Y); open edges are open in the next stage.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "Cn-EY"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless1",
+   "label": "thm:arcless(1)",
+   "lines": "331,339",
+   "stmt": "Y is a closed subspace of E(Y) and d extends d_Y.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "T-arcless0"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless2",
+   "label": "thm:arcless(2)",
+   "lines": "332,341",
+   "stmt": "Any two distinct points lie in a copy of K of diameter d(x,y); open balls are m-strongly connected; E(Y) is connected.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "Cn-EY"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless3a",
+   "label": "thm:arcless(3), no arcs",
+   "lines": "333,343",
+   "stmt": "E(Y) contains no arc (Baire category argument).",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "T-arcless0"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless3b",
+   "label": "thm:arcless(3), locally connected compacta finite",
+   "lines": "333,345",
+   "stmt": "Every compact, locally connected subspace of E(Y) is finite.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "T-arcless3a",
+    "EXT-PLPC",
+    "EXT-ARC"
+   ],
+   "cls": "B",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless4",
+   "label": "thm:arcless(4)",
+   "lines": "334,347",
+   "stmt": "E(Y) is a locally m-strongly connected mosaic space; it and all nonempty open subspaces are m-continuum spaces.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "T-arcless2",
+    "P-classes1"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-arcless5",
+   "label": "thm:arcless(5)",
+   "lines": "335,349",
+   "stmt": "E(Y) is not a quasi-curve space and not locally arcwise connected.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "T-arcless3b"
+   ],
+   "cls": "B",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "C-Q1",
+   "label": "cor:Q1",
+   "lines": "352-355",
+   "stmt": "E(K) is a metrizable, locally m-strongly connected m-continuum space, all of whose nonempty open subspaces are m-continuum spaces, and it is not a quasi-curve space.",
+   "lean": "MosaicSpaces.Paper.answer_Q1a, MosaicSpaces.Paper.answer_Q1b (via the cone over G)",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "T-arcless4",
+    "T-arcless5",
+    "K-exist"
+   ],
+   "cls": "B",
+   "status": "partial",
+   "note": "Q1a and Q1b are answered, and Comparator-checked, by the cone over G, as the article itself remarks after Corollary 6.4. The article's own route (Corollary 3.5 via E(K)) is an example and is not formalized (out of scope by request)."
+  },
+  {
+   "id": "R-complete",
+   "label": "rem:complete",
+   "lines": "357-359",
+   "stmt": "E(Y) is never completely metrizable; the no-arc hypothesis on Y is necessary.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "EXT-MMM",
+    "T-arcless5"
+   ],
+   "cls": "B",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "R-curtis",
+   "label": "rem:curtis",
+   "lines": "361-363",
+   "stmt": "Granting its stated properties, Curtis's Example 1.8 answers Q1a and Q1b.",
+   "lean": "MosaicSpaces.Paper.remark_3_7; mContinuum_not_quasiCurve_of_firstCountable",
+   "module": "MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "P-fc",
+    "C-qclac",
+    "EXT-CURTIS"
+   ],
+   "cls": "C",
+   "status": "partial",
+   "note": "The implication used in the remark is compared. Curtis's example itself is cited and, as the article says, unverified; it is not formalized."
+  },
+  {
+   "id": "F-metric",
+   "label": "null fans: metric",
+   "lines": "378-380",
+   "stmt": "phi is a metric on Fan(I) (isometric to a subset of l1(I)).",
+   "lean": "MosaicSpaces.Paper.fan_metric; Fan.phi, Fan.isOpen_iff_phi, Fan.phi_spine_same, Fan.phi_spine_ne",
+   "module": "MosaicSpaces.FanMetric",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "Fan(J) is the subspace of J -> R (product topology); the article's metric phi (nu shifted by 1) is proved to be a metric inducing exactly this topology, for every injection nu."
+  },
+  {
+   "id": "F-1",
+   "label": "(F1)",
+   "lines": "382",
+   "stmt": "Neighbourhoods of the centre; the topology does not depend on nu.",
+   "lean": "MosaicSpaces.Paper.fan_metric (topology independent of nu); Fan.mem_nhds_centre_iff",
+   "module": "MosaicSpaces.FanMetric",
+   "deps": [
+    "F-metric"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Independence of nu is compared; the neighbourhood characterization of the centre is a library theorem."
+  },
+  {
+   "id": "F-2",
+   "label": "(F2)",
+   "lines": "383",
+   "stmt": "Fan(I) is a Peano continuum; spines are arcs; spines minus the centre are open.",
+   "lean": "Fan.isCompact_fan, Fan instances CompactSpace / MetrizableSpace, Fan.pathConnectedSpace, Fan.locallyPathConnectedSpace, Fan.spine_arc",
+   "module": "MosaicSpaces.Fan, MosaicSpaces.FanMetric",
+   "deps": [
+    "F-metric"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": ""
+  },
+  {
+   "id": "F-3",
+   "label": "(F3)",
+   "lines": "384",
+   "stmt": "Points on pairwise distinct spines converge to the centre.",
+   "lean": "Fan.tendsto_centre",
+   "module": "MosaicSpaces.Fan",
+   "deps": [
+    "F-metric"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": ""
+  },
+  {
+   "id": "F-4",
+   "label": "(F4)",
+   "lines": "385",
+   "stmt": "Fan(J) is a closed subspace of Fan(I) for nonempty J.",
+   "lean": "Fan.extend, Fan.isClosedEmbedding_extend",
+   "module": "MosaicSpaces.FanMetric",
+   "deps": [
+    "F-1"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Not used by the proofs: the Lambda-Lambda compatibility is proved with GSpace.restr."
+  },
+  {
+   "id": "Cn-G-mad",
+   "label": "con:G: family D and (4.1)",
+   "lines": "390-395",
+   "stmt": "A maximal almost disjoint family D of infinite subsets of N x N with finite sections exists (Zorn); maximality in the form (4.1).",
+   "lean": "MosaicSpaces.Paper.exists_madFamily; exists_isMADFamily, IsC, IsMADFamily",
+   "module": "MosaicSpaces.G/Basic",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "Zorn's lemma."
+  },
+  {
+   "id": "Cn-G",
+   "label": "con:G: set and pieces",
+   "lines": "397-412",
+   "stmt": "Underlying set of G; pieces R_n, Sigma, Phi_D, Lambda_S; G has the mosaic topology.",
+   "lean": "GSpace, GSpace.gTop, rowMap, sigMap, phiMap, lamMap, arcMap, spokeMap, witT",
+   "module": "MosaicSpaces.G/Basic",
+   "deps": [
+    "Cn-G-mad",
+    "F-metric",
+    "L-recognise"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Inductive type; topology = final topology of the piece maps. Witness (n,i) at 1/(i+1); arcMap runs from infinity to p_D."
+  },
+  {
+   "id": "L-Gmosaic",
+   "label": "lem:Gmosaic",
+   "lines": "414-437",
+   "stmt": "The pieces form a mosaic of compact metric spaces; pieces are closed subspaces; x_n -> infinity; injective sequences in D converge to p_D.",
+   "lean": "GSpace.isMosaicFamily_pieces, GSpace.isMosaicSpace, GSpace.isClosedEmbedding_rowMap/_sigMap/_phiMap/_lamMap, GSpace.tendsto_xpt, GSpace.pnt_mem_of_infinite",
+   "module": "MosaicSpaces.G/Basic, MosaicSpaces.G/Mosaic, MosaicSpaces.G/Capture",
+   "deps": [
+    "Cn-G",
+    "F-3",
+    "F-4"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Enters the compared statement MosaicSpaces.Paper.theorem_4_11."
+  },
+  {
+   "id": "G-term",
+   "label": "vertices and elementary intervals",
+   "lines": "439",
+   "stmt": "Every non-vertex lies in the interior of exactly one elementary interval; only the x_n lie on none; continuity is tested on pieces.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "Cn-G",
+    "P-basic3"
+   ],
+   "cls": "A",
+   "status": "documentation",
+   "note": "Terminology."
+  },
+  {
+   "id": "L-closed",
+   "label": "lem:closed (1)-(3)",
+   "lines": "443-455",
+   "stmt": "How a closed set meets the pieces.",
+   "lean": "GSpace.finite_xpt_mem, GSpace.finite_arc_mem, GSpace.finite_spoke_mem, GSpace.finite_wit_mem, GSpace.exists_row_nmem",
+   "module": "MosaicSpaces.G/Mosaic",
+   "deps": [
+    "L-Gmosaic"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": ""
+  },
+  {
+   "id": "L-binary",
+   "label": "lem:binary",
+   "lines": "460-479",
+   "stmt": "Binary extension lemma (Tietze on elementary intervals).",
+   "lean": "GSpace.exists_binary",
+   "module": "MosaicSpaces.G/Tychonoff",
+   "deps": [
+    "L-closed",
+    "G-term"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Enters MosaicSpaces.Paper.theorem_4_11 through T35Space."
+  },
+  {
+   "id": "T-tych",
+   "label": "thm:tych",
+   "lines": "481-500",
+   "stmt": "G is Tychonoff; each p_D has a neighbourhood containing no other p_D'.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11 (T35Space; injective p with isolating neighbourhoods); GSpace.t35Space, GSpace.exists_isolating_nhd",
+   "module": "MosaicSpaces.G/Tychonoff, MosaicSpaces.G/Capture",
+   "deps": [
+    "L-binary"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-routes",
+   "label": "lem:routes",
+   "lines": "503-512",
+   "stmt": "For closed F missing infinity, all but finitely many x_n are joined to infinity by a path missing F.",
+   "lean": "GSpace.routes",
+   "module": "MosaicSpaces.G/Mosaic",
+   "deps": [
+    "L-closed",
+    "Cn-G-mad"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": ""
+  },
+  {
+   "id": "P-Glac",
+   "label": "prop:Glac",
+   "lines": "514-519",
+   "stmt": "Path components of open subsets of G are open and arcwise connected; G is locally arcwise connected.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11; GSpace.isOpen_pathComponentIn, G_arcwise",
+   "module": "MosaicSpaces.G/Mosaic, MosaicSpaces.Answers",
+   "deps": [
+    "L-routes",
+    "L-lac"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "L-cut",
+   "label": "lem:cut",
+   "lines": "524-535",
+   "stmt": "A closed connected set containing infinity and x_n contains infinitely many witnesses of row n.",
+   "lean": "GSpace.infinite_wit_of_isPreconnected",
+   "module": "MosaicSpaces.G/Capture",
+   "deps": [
+    "L-Gmosaic"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": "Only closedness and preconnectedness of K are used."
+  },
+  {
+   "id": "P-nocapture",
+   "label": "prop:nocapture",
+   "lines": "537-546",
+   "stmt": "A closed connected K containing infinity with countable spread contains only finitely many x_n; no metric continuum contains infinity and infinitely many x_n.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11 (countable-spread clause and metric-continuum clause); GSpace.finite_xpt_of_spread",
+   "module": "MosaicSpaces.G/Capture",
+   "deps": [
+    "L-cut",
+    "T-tych",
+    "Cn-G-mad",
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "R-spread",
+   "label": "rem:spread",
+   "lines": "548-550",
+   "stmt": "Countable spread cannot be weakened to separability (explicit K).",
+   "lean": "MosaicSpaces.Paper.theorem_4_11 (Remark 4.10 clause); GSpace.remark_4_10",
+   "module": "MosaicSpaces.G/Remarks",
+   "deps": [
+    "P-nocapture"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-G",
+   "label": "thm:G (1)-(4)",
+   "lines": "553-564",
+   "stmt": "Summary: G is a Tychonoff mosaic space, locally arcwise connected, x_n -> infinity uncaptured, not an m-continuum space, no path through infinitely many x_n.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11; MosaicSpaces.G_properties",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "L-Gmosaic",
+    "T-tych",
+    "P-Glac",
+    "P-nocapture"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "All of (1)-(4)."
+  },
+  {
+   "id": "C-Q3",
+   "label": "cor:Q3",
+   "lines": "566-571",
+   "stmt": "G is a locally arcwise connected mosaic space that is not a quasi-curve space; completely regular, sequential, locally pathwise connected, not path-determined.",
+   "lean": "MosaicSpaces.Paper.answer_Q3",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "T-G"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "Including 'not path-determined'."
+  },
+  {
+   "id": "R-Gprops1",
+   "label": "rem:Gprops(1)",
+   "lines": "574",
+   "stmt": "G is not first countable at infinity.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11; G_not_isCountablyGenerated_nhds_infty, G_not_firstCountable",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "T-G",
+    "P-fc"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "R-Gprops2",
+   "label": "rem:Gprops(2)",
+   "lines": "574",
+   "stmt": "G is not Frechet-Urysohn.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11; GSpace.not_frechetUrysohnSpace",
+   "module": "MosaicSpaces.G/Remarks",
+   "deps": [
+    "L-Gmosaic",
+    "P-basic4"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "R-Gprops3",
+   "label": "rem:Gprops(3)",
+   "lines": "574",
+   "stmt": "G is locally m-strongly connected and not an m-continuum space.",
+   "lean": "MosaicSpaces.Paper.theorem_4_11",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "T-G",
+    "E-localimpl-a"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "R-Gprops4",
+   "label": "rem:Gprops(4)",
+   "lines": "574",
+   "stmt": "Use of the axiom of choice; role of finite sections.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "D",
+   "status": "documentation",
+   "note": ""
+  },
+  {
+   "id": "S-fst",
+   "label": "sec:fst: translation",
+   "lines": "581-583",
+   "stmt": "A Hausdorff, sequential, locally pathwise connected space that is not path-determined is a locally arcwise connected mosaic space that is not a quasi-curve space; HE is such a space.",
+   "lean": "MosaicSpaces.Paper.sec_5_1_translation",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "P-char",
+    "P-pathdet-de",
+    "E-localimpl-b",
+    "EXT-FST"
+   ],
+   "cls": "C",
+   "status": "partial",
+   "note": "The general translation is compared; the space HE is cited, not formalized."
+  },
+  {
+   "id": "S-vd-def",
+   "label": "sec:vd: definition of SHE",
+   "lines": "588-604",
+   "stmt": "Underlying set, families Phi, M_Phi, lambda, sets A, B, basic neighbourhoods; they generate a topology; L_f.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "S-vd-lambda",
+   "label": "sec:vd: lambda with thin range",
+   "lines": "591-592",
+   "stmt": "An injection lambda whose range contains no uncountable compact set exists.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "EXT-VD"
+   ],
+   "cls": "C",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "S-vd-cited",
+   "label": "sec:vd: van Douwen's theorem",
+   "lines": "586, 606, 662",
+   "stmt": "SHE is sigma-compact, cosmic, regular, locally pathwise connected, Frechet, not path-determined.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "EXT-VD"
+   ],
+   "cls": "C",
+   "status": "blocked",
+   "note": "Cited. Any Lean statement using the Frechet property must carry the range condition on lambda."
+  },
+  {
+   "id": "L-SHEbasic",
+   "label": "lem:SHEbasic (1)-(6)",
+   "lines": "608-630",
+   "stmt": "Basic neighbourhoods are open; Hausdorff; k -> infinity; arcs embed openly; H(k,a) closed; L_f closed discrete.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "S-vd-def"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "L-bump",
+   "label": "lem:bump",
+   "lines": "634-639",
+   "stmt": "Boundary bumping for compact connected Hausdorff spaces.",
+   "lean": "MosaicSpaces.Paper.lemma_5_2; boundary_bumping",
+   "module": "MosaicSpaces.Classical.Bump",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-SHE",
+   "label": "prop:SHE",
+   "lines": "641-660",
+   "stmt": "No compact connected subset of SHE contains infinitely many points of N; SHE is not an m-continuum space.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "L-SHEbasic",
+    "L-bump",
+    "P-basic4"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "S-vd-compare",
+   "label": "sec:vd: closing comparison",
+   "lines": "662",
+   "stmt": "Comparison of the mechanisms of SHE and G.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "D",
+   "status": "documentation",
+   "note": ""
+  },
+  {
+   "id": "L-whitehead",
+   "label": "lem:whitehead",
+   "lines": "673-678",
+   "stmt": "q quotient, L locally compact Hausdorff => q x id_L quotient.",
+   "lean": "MosaicSpaces.Paper.lemma_6_1; isQuotientMap_prodMap_id",
+   "module": "MosaicSpaces.Cone",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "Without the Hausdorff hypothesis on L."
+  },
+  {
+   "id": "Cone-prelim",
+   "label": "cone: preliminaries",
+   "lines": "681",
+   "stmt": "Definition of the cone; cone over a compact metrizable space is a metric continuum; neighbourhood base at the vertex.",
+   "lean": "Cone, Cone.mk, Cone.vertex, Cone.compactSpace, Cone.metrizableSpace, Cone.connectedSpace, Cone.isMetricContinuum_univ",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "R-hausimage"
+   ],
+   "cls": "A",
+   "status": "proved",
+   "note": ""
+  },
+  {
+   "id": "P-cone1",
+   "label": "prop:cone(1)",
+   "lines": "686,692",
+   "stmt": "The punctured cone is open and homeomorphic to Y x [0,1).",
+   "lean": "MosaicSpaces.Paper.prop_6_2_1; Cone.isOpenEmbedding_punctured, Cone.range_punctured",
+   "module": "MosaicSpaces.Cone",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-cone2",
+   "label": "prop:cone(2)",
+   "lines": "687,694-700",
+   "stmt": "Each P_alpha is a closed subspace homeomorphic to the cone over the piece.",
+   "lean": "MosaicSpaces.Paper.prop_6_2_2; Cone.isClosedEmbedding_pieceMap, Cone.isMetricContinuum_piece",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "L-whitehead",
+    "P-basic3"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-cone3",
+   "label": "prop:cone(3)",
+   "lines": "688,702,705",
+   "stmt": "The cones over the pieces form a mosaic generating the cone topology; the cone is an m-continuum space; pi is continuous.",
+   "lean": "MosaicSpaces.Paper.prop_6_2_3, MosaicSpaces.Paper.theorem_6_3_1; Cone.isMosaicFamily_pieces, Cone.isMContinuumSpace",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "P-cone2"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-cone1",
+   "label": "thm:conetransfer(1)",
+   "lines": "710,718",
+   "stmt": "The cone over a nonempty mosaic space is a contractible m-continuum space.",
+   "lean": "MosaicSpaces.Paper.theorem_6_3_1; Cone.contractibleSpace",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "P-cone3",
+    "L-whitehead"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-cone2",
+   "label": "thm:conetransfer(2)",
+   "lines": "711,720",
+   "stmt": "Y locally path connected => path components of open subsets of the cone are open; cone locally arcwise and locally m-strongly connected.",
+   "lean": "MosaicSpaces.Paper.theorem_6_3_2; Cone.locallyPathConnectedSpace, Cone.locallyMStronglyConnected",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "E-localimpl-a"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-cone3",
+   "label": "thm:conetransfer(3)",
+   "lines": "712,722",
+   "stmt": "Y not m-continuum => the punctured cone is not an m-continuum space.",
+   "lean": "MosaicSpaces.Paper.theorem_6_3_3; Cone.not_isMContinuumSpace_punctured",
+   "module": "MosaicSpaces.Cone",
+   "deps": [
+    "P-cone1",
+    "P-classes1",
+    "L-image"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-cone4",
+   "label": "thm:conetransfer(4)",
+   "lines": "713,724-732",
+   "stmt": "Every nonempty open subspace of the cone is m-continuum iff the same holds for Y.",
+   "lean": "MosaicSpaces.Paper.theorem_6_3_4; Cone.allOpenMCont_of_cone, Cone.allOpenMCont_cone",
+   "module": "MosaicSpaces.Cone4",
+   "deps": [
+    "P-cone1",
+    "P-cone3",
+    "P-classes1"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "T-cone5",
+   "label": "thm:conetransfer(5)",
+   "lines": "714,734",
+   "stmt": "Continuous real functions separate points of the cone if they separate points of Y; then the cone is Hausdorff.",
+   "lean": "MosaicSpaces.Paper.theorem_6_3_5, MosaicSpaces.Paper.theorem_6_3_5_sep; Cone.separatesPoints, Cone.t2Space",
+   "module": "MosaicSpaces.Cone",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "C-Q2",
+   "label": "cor:Q2",
+   "lines": "737-744",
+   "stmt": "cG is a contractible Hausdorff m-continuum space, locally arcwise connected, whose punctured open subspace is not m-continuum; not a quasi-curve space; also a counterexample to Q1a, Q1b, Q3.",
+   "lean": "MosaicSpaces.Paper.answer_Q2; answer_Q2_full",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "T-G",
+    "T-cone1",
+    "T-cone2",
+    "T-cone3",
+    "T-cone5",
+    "P-qcopen"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "Corollary 6.4 in full (Hausdorff, contractible, LAC, LmS, open non-m-continuum subspace, not QC)."
+  },
+  {
+   "id": "R-coneSHE",
+   "label": "rem:coneSHE",
+   "lines": "746-748",
+   "stmt": "cSHE is another counterexample to Q2.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "P-SHE",
+    "EXT-VD"
+   ],
+   "cls": "C",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "P-fc",
+   "label": "prop:fc",
+   "lines": "755-765",
+   "stmt": "First countable point with small open m-strongly connected neighbourhoods: a tail of every convergent sequence in U lies with the limit in a metric continuum inside U. Consequence for first countable spaces; equivalence of (H) and (LmS).",
+   "lean": "MosaicSpaces.Paper.prop_7_1, MosaicSpaces.Paper.prop_7_1_tail; exists_metricContinuum_tail, isMContinuumSpace_of_isOpen_of_firstCountable",
+   "module": "MosaicSpaces.FirstCountable",
+   "deps": [
+    "C-image3",
+    "P-classes1",
+    "P-char",
+    "P-lav52"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "P-fcpath1",
+   "label": "prop:fcpath, path through a tail",
+   "lines": "767-776",
+   "stmt": "First countable point with small open path connected neighbourhoods: a path f with f(1)=x and f(1-1/j)=x_{N+j-1}.",
+   "lean": "MosaicSpaces.Paper.prop_7_2_tail; exists_path_through_tail, exists_concat_path",
+   "module": "MosaicSpaces.FirstCountable",
+   "deps": [],
+   "cls": "A",
+   "status": "compared",
+   "note": "No mosaic hypothesis needed."
+  },
+  {
+   "id": "P-fcpath2",
+   "label": "prop:fcpath, consequence",
+   "lines": "770,777",
+   "stmt": "Every first countable, locally arcwise connected mosaic space is a quasi-curve space.",
+   "lean": "MosaicSpaces.Paper.prop_7_2, MosaicSpaces.Paper.prop_7_2_path; isCurveSpace_of_firstCountable, isQuasiCurveSpace_of_firstCountable",
+   "module": "MosaicSpaces.FirstCountable",
+   "deps": [
+    "P-fcpath1",
+    "P-classes2",
+    "EXT-HMC"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "Only local path connectedness is used."
+  },
+  {
+   "id": "Z-exist",
+   "label": "existence of Z",
+   "lines": "781",
+   "stmt": "A connected, locally connected plane set with more than one point and no nondegenerate continuum exists.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "EXT-Z"
+   ],
+   "cls": "C",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "X-cZ",
+   "label": "ex:cZ",
+   "lines": "783-792",
+   "stmt": "cZ is an m-continuum space, locally connected, not locally m-strongly connected, not a quasi-curve space.",
+   "lean": "-",
+   "module": "-",
+   "deps": [
+    "P-cone3",
+    "P-cone1",
+    "C-qclac"
+   ],
+   "cls": "A",
+   "status": "not-formalized",
+   "note": "Out of scope by request (examples are not formalized)."
+  },
+  {
+   "id": "T-chain-impl",
+   "label": "thm:chain: implications",
+   "lines": "795-806",
+   "stmt": "(QC) => (H) => (LmS) => (LC); (QC) => LAC => (LmS).",
+   "lean": "MosaicSpaces.Paper.theorem_7_4_impl, MosaicSpaces.Paper.theorem_7_4_lac; chain_implications, chain_lac",
+   "module": "MosaicSpaces.Answers, MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "P-qcopen",
+    "P-lav52",
+    "I-2",
+    "C-qclac",
+    "E-localimpl-a"
+   ],
+   "cls": "A",
+   "status": "compared",
+   "note": "Stated for all mosaic spaces."
+  },
+  {
+   "id": "T-chain-strict",
+   "label": "thm:chain: strictness and independence",
+   "lines": "803-808",
+   "stmt": "None of the three implications reverses; LAC is independent of (H).",
+   "lean": "MosaicSpaces.Paper.theorem_7_4_strict_H_LmS, MosaicSpaces.Paper.theorem_7_4_strict_LAC_H; chain_strict_H_LmS, chain_LAC_not_H",
+   "module": "MosaicSpaces.Answers",
+   "deps": [
+    "C-Q1",
+    "C-Q2",
+    "X-cZ",
+    "Z-exist"
+   ],
+   "cls": "B",
+   "status": "partial",
+   "note": "(LmS) =/=> (H) and LAC =/=> (H) (witness cG) are compared. (H) =/=> (QC), (LC) =/=> (LmS) and (H) =/=> LAC need E(K) and cZ: examples, out of scope by request."
+  },
+  {
+   "id": "T-chain-fc",
+   "label": "closing remark",
+   "lines": "810",
+   "stmt": "For first countable m-continuum spaces (H) <=> (LmS) and (QC) <=> LAC.",
+   "lean": "MosaicSpaces.Paper.theorem_7_4_firstCountable, MosaicSpaces.Paper.theorem_7_4_firstCountable_lac",
+   "module": "MosaicSpaces.Answers, MosaicSpaces.Peano.Consequences",
+   "deps": [
+    "P-fc",
+    "P-fcpath2",
+    "C-qclac"
+   ],
+   "cls": "B",
+   "status": "compared",
+   "note": ""
+  },
+  {
+   "id": "AI",
+   "label": "Use of artificial intelligence",
+   "lines": "830-831",
+   "stmt": "Disclosure statement.",
+   "lean": "-",
+   "module": "-",
+   "deps": [],
+   "cls": "D",
+   "status": "documentation",
+   "note": ""
+  }
+ ],
+ "status_counts": {
+  "compared": 59,
+  "documentation": 5,
+  "partial": 5,
+  "proved": 13,
+  "not-formalized": 23,
+  "blocked": 1
+ },
+ "class_counts": {
+  "A": 82,
+  "D": 4,
+  "B": 14,
+  "C": 6
+ }
+}

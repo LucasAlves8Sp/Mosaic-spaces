@@ -1,0 +1,692 @@
+WARNING: Sandbox disabled, this run is not trustworthy.
+Resolving dependencies
+Building Challenge
+⚠ [1925/1926] Replayed Challenge
+warning: Challenge.lean:198:8: declaration uses `sorry`
+warning: Challenge.lean:202:8: declaration uses `sorry`
+warning: Challenge.lean:208:8: declaration uses `sorry`
+warning: Challenge.lean:214:8: declaration uses `sorry`
+warning: Challenge.lean:217:8: declaration uses `sorry`
+warning: Challenge.lean:220:8: declaration uses `sorry`
+warning: Challenge.lean:225:8: declaration uses `sorry`
+warning: Challenge.lean:230:8: declaration uses `sorry`
+warning: Challenge.lean:235:8: declaration uses `sorry`
+warning: Challenge.lean:239:8: declaration uses `sorry`
+warning: Challenge.lean:243:8: declaration uses `sorry`
+warning: Challenge.lean:247:8: declaration uses `sorry`
+warning: Challenge.lean:253:8: declaration uses `sorry`
+warning: Challenge.lean:258:8: declaration uses `sorry`
+warning: Challenge.lean:263:8: declaration uses `sorry`
+warning: Challenge.lean:273:8: declaration uses `sorry`
+warning: Challenge.lean:281:8: declaration uses `sorry`
+warning: Challenge.lean:293:8: declaration uses `sorry`
+warning: Challenge.lean:301:8: declaration uses `sorry`
+warning: Challenge.lean:307:8: declaration uses `sorry`
+warning: Challenge.lean:311:8: declaration uses `sorry`
+warning: Challenge.lean:316:8: declaration uses `sorry`
+warning: Challenge.lean:322:8: declaration uses `sorry`
+warning: Challenge.lean:327:8: declaration uses `sorry`
+warning: Challenge.lean:332:8: declaration uses `sorry`
+warning: Challenge.lean:337:8: declaration uses `sorry`
+warning: Challenge.lean:345:8: declaration uses `sorry`
+warning: Challenge.lean:349:8: declaration uses `sorry`
+warning: Challenge.lean:354:8: declaration uses `sorry`
+warning: Challenge.lean:358:8: declaration uses `sorry`
+warning: Challenge.lean:364:8: declaration uses `sorry`
+warning: Challenge.lean:369:8: declaration uses `sorry`
+Build completed successfully (1926 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, MosaicSpaces.Paper.prop_2_3_t1, MosaicSpaces.Paper.lemma_2_4, MosaicSpaces.Paper.cor_2_6_union, MosaicSpaces.Paper.prop_2_7, MosaicSpaces.Paper.prop_2_7_t2, MosaicSpaces.Paper.prop_2_7_open, MosaicSpaces.Paper.lemma_2_8, MosaicSpaces.Paper.cor_2_9_1, MosaicSpaces.Paper.cor_2_9_2, MosaicSpaces.Paper.cor_2_9_2_path, MosaicSpaces.Paper.cor_2_9_qc, MosaicSpaces.Paper.display_2_1, MosaicSpaces.Paper.prop_2_12, MosaicSpaces.Paper.prop_2_13, MosaicSpaces.Paper.lemma_2_14, MosaicSpaces.Paper.exists_madFamily, MosaicSpaces.Paper.theorem_4_11, MosaicSpaces.Paper.answer_Q3_path, MosaicSpaces.Paper.lemma_6_1, MosaicSpaces.Paper.theorem_6_3_1, MosaicSpaces.Paper.theorem_6_3_2, MosaicSpaces.Paper.theorem_6_3_3, MosaicSpaces.Paper.theorem_6_3_5, MosaicSpaces.Paper.answer_Q2, MosaicSpaces.Paper.answer_Q1b, MosaicSpaces.Paper.answer_Q1a, MosaicSpaces.Paper.prop_7_1, MosaicSpaces.Paper.prop_7_2_path, MosaicSpaces.Paper.prop_7_2, MosaicSpaces.Paper.theorem_7_4_impl, MosaicSpaces.Paper.theorem_7_4_strict_H_LmS, MosaicSpaces.Paper.theorem_7_4_firstCountable, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+⚠ [1768/1885] Replayed MosaicSpaces.Image
+warning: MosaicSpaces/Image.lean:100:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Image.lean:101:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Image.lean:102:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Image.lean:159:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1769/1885] Replayed MosaicSpaces.Mosaic
+warning: MosaicSpaces/Mosaic.lean:121:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:132:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:139:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:150:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:158:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: MosaicSpaces/Mosaic.lean:162:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: MosaicSpaces/Mosaic.lean:167:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:194:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:207:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Mosaic.lean:285:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1774/1885] Replayed MosaicSpaces.Continua
+warning: MosaicSpaces/Continua.lean:40:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Continua.lean:50:0: automatically included section variable(s) unused in theorem `MosaicSpaces.isClosed_setOf_fst`:
+  [∀ (n : ℕ), CompactSpace (K n)]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [∀ (n : ℕ), CompactSpace (K n)] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MosaicSpaces/Continua.lean:121:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Continua.lean:122:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Continua.lean:123:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Continua.lean:191:24: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+warning: MosaicSpaces/Continua.lean:259:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1867/1885] Replayed MosaicSpaces.Classes
+warning: MosaicSpaces/Classes.lean:92:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:93:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:117:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:133:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:159:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:180:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:181:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:182:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Classes.lean:201:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1868/1885] Replayed MosaicSpaces.Local
+warning: MosaicSpaces/Local.lean:124:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Local.lean:177:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Local.lean:207:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Local.lean:212:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Local.lean:213:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Local.lean:214:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1869/1885] Replayed MosaicSpaces.PathComponents
+warning: MosaicSpaces/PathComponents.lean:38:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/PathComponents.lean:37:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1870/1885] Replayed MosaicSpaces.FirstCountable
+warning: MosaicSpaces/FirstCountable.lean:108:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/FirstCountable.lean:212:67: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/FirstCountable.lean:220:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/FirstCountable.lean:245:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/FirstCountable.lean:248:22: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/FirstCountable.lean:250:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/FirstCountable.lean:261:16: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [1931/1940] Replayed MosaicSpaces.Cone
+warning: MosaicSpaces/Cone.lean:158:43: Variable name `p` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _p
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: MosaicSpaces/Cone.lean:158:45: Variable name `q` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _q
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: MosaicSpaces/Cone.lean:185:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:221:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:222:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:223:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:360:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Cone.lean:365:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Cone.lean:383:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:384:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:385:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:428:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:506:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:528:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:529:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/Cone.lean:533:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1932/1940] Replayed MosaicSpaces.Fan
+warning: MosaicSpaces/Fan.lean:48:20: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Fan.lean:132:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: MosaicSpaces/Fan.lean:196:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/Fan.lean:229:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Fan.lean:229:13: This simp argument is unused:
+  mem_setOf_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [not_not] at hk
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: MosaicSpaces/Fan.lean:307:37: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/Fan.lean:308:23: This simp argument is unused:
+  exists_and_right
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [W, mem_compl_iff, mem_setOf_eq, not_forall, mem_image, mem_preimage, Prod.exists, exists_eq_right]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1933/1940] Replayed MosaicSpaces.G.Basic
+warning: MosaicSpaces/G/Basic.lean:61:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: MosaicSpaces/G/Basic.lean:293:0: Definition `MosaicSpaces.GSpace.gTop` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+warning: MosaicSpaces/G/Basic.lean:497:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/G/Basic.lean:499:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/G/Basic.lean:503:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/G/Basic.lean:503:31: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/G/Basic.lean:507:19: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/G/Basic.lean:508:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/G/Basic.lean:513:15: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/G/Basic.lean:515:15: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/G/Basic.lean:529:22: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: MosaicSpaces/G/Basic.lean:537:22: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: MosaicSpaces/G/Basic.lean:545:18: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+warning: MosaicSpaces/G/Basic.lean:604:0: automatically included section variable(s) unused in theorem `MosaicSpaces.GSpace.isClosedMap_sigMap`:
+  h𝒟
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h𝒟 in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: MosaicSpaces/G/Basic.lean:632:0: automatically included section variable(s) unused in theorem `MosaicSpaces.GSpace.isClosedMap_lamMap`:
+  h𝒟
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit h𝒟 in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1935/1940] Replayed MosaicSpaces.G.Mosaic
+warning: MosaicSpaces/G/Mosaic.lean:118:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Mosaic.lean:218:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/G/Mosaic.lean:294:31: `Set.Infinite.diff` has been deprecated: Use `Set.Infinite.sdiff` instead
+warning: MosaicSpaces/G/Mosaic.lean:315:40: `Set.Infinite.diff` has been deprecated: Use `Set.Infinite.sdiff` instead
+warning: MosaicSpaces/G/Mosaic.lean:372:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Mosaic.lean:374:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1936/1940] Replayed MosaicSpaces.G.Capture
+warning: MosaicSpaces/G/Capture.lean:120:12: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: MosaicSpaces/G/Capture.lean:263:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Capture.lean:269:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Capture.lean:270:4: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Capture.lean:271:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: MosaicSpaces/G/Capture.lean:297:15: `Set.Infinite.diff` has been deprecated: Use `Set.Infinite.sdiff` instead
+warning: MosaicSpaces/G/Capture.lean:342:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [1937/1940] Replayed MosaicSpaces.Answers
+warning: MosaicSpaces/Answers.lean:132:65: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: MosaicSpaces/Answers.lean:145:9: Variable name `U` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _U
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: MosaicSpaces/Answers.lean:164:38: Variable name `U` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _U
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1939/1940] Built Solution (1.2s)
+warning: Solution.lean:39:8: declaration uses `sorry`
+Build completed successfully (1940 jobs).
+error: Illegal axiom detected: 'sorryAx'
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, MosaicSpaces.Paper.prop_2_3_t1, MosaicSpaces.Paper.lemma_2_4, MosaicSpaces.Paper.cor_2_6_union, MosaicSpaces.Paper.prop_2_7, MosaicSpaces.Paper.prop_2_7_t2, MosaicSpaces.Paper.prop_2_7_open, MosaicSpaces.Paper.lemma_2_8, MosaicSpaces.Paper.cor_2_9_1, MosaicSpaces.Paper.cor_2_9_2, MosaicSpaces.Paper.cor_2_9_2_path, MosaicSpaces.Paper.cor_2_9_qc, MosaicSpaces.Paper.display_2_1, MosaicSpaces.Paper.prop_2_12, MosaicSpaces.Paper.prop_2_13, MosaicSpaces.Paper.lemma_2_14, MosaicSpaces.Paper.exists_madFamily, MosaicSpaces.Paper.theorem_4_11, MosaicSpaces.Paper.answer_Q3_path, MosaicSpaces.Paper.lemma_6_1, MosaicSpaces.Paper.theorem_6_3_1, MosaicSpaces.Paper.theorem_6_3_2, MosaicSpaces.Paper.theorem_6_3_3, MosaicSpaces.Paper.theorem_6_3_5, MosaicSpaces.Paper.answer_Q2, MosaicSpaces.Paper.answer_Q1b, MosaicSpaces.Paper.answer_Q1a, MosaicSpaces.Paper.prop_7_1, MosaicSpaces.Paper.prop_7_2_path, MosaicSpaces.Paper.prop_7_2, MosaicSpaces.Paper.theorem_7_4_impl, MosaicSpaces.Paper.theorem_7_4_strict_H_LmS, MosaicSpaces.Paper.theorem_7_4_firstCountable, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution

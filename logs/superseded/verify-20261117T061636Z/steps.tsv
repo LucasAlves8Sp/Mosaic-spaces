@@ -1,0 +1,18 @@
+00-sources	0	1	python3 scripts/check_sources.py /home/claude/mosaic-spaces
+01-clean	0	0	rm -rf .lake/build
+01-build	0	22	lake build
+01-build-challenge	0	2	lake build Challenge
+02-axioms-print	0	1	lake env lean scripts/axioms.lean
+02-axioms-check	0	0	sh -c python3 scripts/check_axioms.py < '/home/claude/mosaic-spaces/logs/verify-20261117T061636Z/02-axioms-print.log'
+03-comparator	not-run	0	bwrap not installed: sandboxed run impossible
+04-check	not-run	0	bwrap not installed: sandboxed run impossible
+05-check-paranoid	not-run	0	bwrap not installed: sandboxed run impossible
+06-comparator-paranoid	not-run	0	bwrap not installed: sandboxed run impossible
+07-palomar-local	not-run	0	bwrap not installed: sandboxed run impossible
+03-comparator-NOSANDBOX	0	31	lake comparator --config comparator.json --inadvisably-no-sandbox
+04-check-NOSANDBOX	0	393	lake check --inadvisably-no-sandbox
+05-check-paranoid-NOSANDBOX	1	1559	lake check --paranoid --inadvisably-no-sandbox
+06-comparator-paranoid-NOSANDBOX	0	93	lake comparator --config comparator.json --paranoid --inadvisably-no-sandbox
+07-palomar-local-NOSANDBOX	0	48	lake comparator --config /tmp/tmp.xmKM0buYvN --inadvisably-no-sandbox
+08-negative-sorry-NOSANDBOX	1	16	lake comparator --config comparator.json --inadvisably-no-sandbox
+09-negative-definition-NOSANDBOX	1	17	lake comparator --config comparator.json --inadvisably-no-sandbox
