@@ -19,7 +19,9 @@ and `Classical.choice`. `Challenge.lean` contains 70 statements, and Comparator 
   failed because NanoDa ran out of memory; the other five checkers accepted, and NanoDa accepted
   the Comparator closure. The project was pushed to
   https://github.com/LucasAlves8Sp/Mosaic-spaces on 2026-11-20 (branch `main`: paper and `lean/`;
-  branch `palomar`: the Lean project at the root, for submission). It is not registered by Palomar.
+  branch `palomar`: the Lean project at the root, for submission). It was submitted to Palomar
+  as `p5uwkylf4s8p`; Palomar's sandboxed mechanical verification completed successfully
+  (https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); the automated review is pending. It is not registered by Palomar.
 
 ## What exists
 

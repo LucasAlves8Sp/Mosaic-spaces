@@ -32,7 +32,7 @@ formalized in Lean 4 with Mathlib, except the examples. Formalized:
 | Hexagon preprint | hexagon:2611.00697, submitted 20 November 2026, awaiting moderation |
 | Lean formalization | [`lean/`](lean/); 70 statements compared by Comparator, answers `MosaicSpaces.Paper.answer_Q1a`, `answer_Q1b`, `answer_Q2`, `answer_Q3` |
 | Review and verification | [`REVIEW_AND_VERIFICATION.md`](REVIEW_AND_VERIFICATION.md) |
-| Palomar | the Lean project as submitted is on the branch [`palomar`](https://github.com/LucasAlves8Sp/Mosaic-spaces/tree/palomar); submission form: https://submit.palomar-registry.org/. **Not registered.** |
+| Palomar | submission `p5uwkylf4s8p` of commit [`5037400`](https://github.com/LucasAlves8Sp/Mosaic-spaces/tree/50374003b6d9eeb772e93000bba84937845c6a69) (branch [`palomar`](https://github.com/LucasAlves8Sp/Mosaic-spaces/tree/palomar)); Palomar's mechanical verification [completed successfully](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779) on 20 November 2026; waiting for the automated review. **Not registered.** |
 
 ## Abstract
 
@@ -133,8 +133,12 @@ Hahn–Mazurkiewicz theorem is not formalized, and no formalized result depends 
 | `lake check --paranoid` on the whole export (296,805 declarations) | five checkers accepted; **NanoDa ran out of memory** (8 GB machine), so this step failed |
 | negative controls (a `sorry` in Solution; a changed definition in Challenge) | both rejected, as they should be |
 
-The sandboxed runs are left to the CI workflow of this repository and to Palomar's own
-verification.
+**Palomar.** The commit `5037400` of the branch `palomar` (the Lean project at the repository
+root, as Palomar requires) was submitted to Palomar on 20 November 2026 as submission
+`p5uwkylf4s8p`. Palomar's public verification workflow, which runs `lake comparator` in its
+sandbox with Lean's kernel and the NanoDa replay, [completed successfully](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779), and Palomar then
+[rendered the accepted Challenge](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44670232933). The automated editorial review is pending; nothing is
+registered until the author decides to register after seeing it.
 
 ## Building
 
@@ -178,4 +182,4 @@ The concept DOI above always resolves to the latest version.
 
 Preprint, not peer reviewed. No independent expert has yet verified the proofs, and no human has
 yet compared the Lean statements with the paper. The statements were reviewed only by AI agents
-(see [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md)). The formalization is submitted to Palomar (not yet registered); the Hexagon moderation is pending.
+(see [`AI_DISCLOSURE.md`](AI_DISCLOSURE.md)). The formalization passed Palomar's mechanical verification (submission `p5uwkylf4s8p`) and awaits Palomar's automated review; it is not registered. The Hexagon moderation is pending.

@@ -84,7 +84,7 @@ The five statuses below are deliberately kept separate.
 | Comparator passed | yes, all 70 statements, but **without the bwrap sandbox** (not installed in the workspace where it ran); also with `--paranoid` |
 | Independent kernel checks passed | **not fully**. Comparator `--paranoid` (unsandboxed): all six checkers, NanoDa included, accepted the Solution closure (21,708 declarations). `lake check --paranoid` on the whole export (296,805 declarations): five checkers accepted, but NanoDa ran out of memory (exit 137), so that step failed |
 | Locally prepared for submission | **no** in the workspace where the checks ran (no sandbox). The project was pushed to GitHub on 2026-11-20; the sandboxed run on the pushed commit is done by the CI workflow and by Palomar's own verification |
-| Registered by Palomar | **no** |
+| Registered by Palomar | **no**. Submitted on 2026-11-20 (submission `p5uwkylf4s8p`, commit `5037400` of the branch `palomar`); Palomar's sandboxed mechanical verification [completed successfully](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/44668068779); waiting for the automated review |
 
 The axiom audit covers 136 declarations: the 70 compared theorems and 66 principal library
 theorems. All of them use only `propext`, `Quot.sound` and `Classical.choice`.
