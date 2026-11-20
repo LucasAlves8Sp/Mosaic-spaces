@@ -6,6 +6,14 @@ authors:
   - family-names: "Alves de Almeida"
     given-names: "Lucas"
     affiliation: "Independent researcher"
+doi: 10.5281/zenodo.24385926
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24385926
+    description: "Zenodo concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.24385927
+    description: "Zenodo, version 1"
 version: v1
 date-released: 2026-11-20
 license: CC-BY-4.0
