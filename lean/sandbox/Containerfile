@@ -1,0 +1,12 @@
+# UNTESTED. Build context: repository root. Needs network at build time only.
+FROM ubuntu:24.04
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      bubblewrap ca-certificates curl git python3 zstd && rm -rf /var/lib/apt/lists/*
+ENV ELAN_HOME=/opt/elan PATH=/opt/elan/bin:$PATH
+COPY lean-toolchain /tmp/lean-toolchain
+RUN curl -sSfL https://github.com/leanprover/elan/releases/latest/download/elan-x86_64-unknown-linux-gnu.tar.gz \
+      | tar xz -C /tmp && /tmp/elan-init -y --no-modify-path --default-toolchain "$(cat /tmp/lean-toolchain)" \
+    && chmod -R a-w /opt/elan
+RUN useradd -m verifier
+USER verifier
+WORKDIR /work

@@ -1,0 +1,43 @@
+# Environment probe, run 2026-11-16T19:28:18Z
+## platform
+Linux 6.18.44-fc-v470 x86_64
+2
+Mem:               7           0           7           0           0           7
+/dev/vda        252G   13G   30G  29% /
+## tools on PATH (empty line = absent)
+lean         ABSENT
+lake         ABSENT
+elan         ABSENT
+leanchecker  ABSENT
+leanexport   ABSENT
+nanoda_bin   ABSENT
+con-ron      ABSENT
+bwrap        ABSENT
+landrun      ABSENT
+docker       /usr/bin/docker
+git          /usr/bin/git
+cargo        /root/.cargo/bin/cargo
+go           /usr/local/go/bin/go
+ruby         /usr/local/bin/ruby
+python3      /usr/local/bin/python3
+## docker daemon
+failed to connect to the docker API at unix:///var/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /var/run/docker.sock: connect: no such file or directory
+## unprivileged user namespaces
+unshare -U: ok
+## host reachability through the session egress proxy (HTTP status; 000 + 'CONNECT tunnel failed, response 403' = policy denial)
+https://release.lean-lang.org/                   curl: (56) CONNECT tunnel failed, response 403 000
+https://releases.lean-lang.org/                  curl: (56) CONNECT tunnel failed, response 403 000
+https://lakecache.blob.core.windows.net/         curl: (56) CONNECT tunnel failed, response 403 000
+https://palomar-registry.org/                    curl: (56) CONNECT tunnel failed, response 403 000
+https://submit.palomar-registry.org/             curl: (56) CONNECT tunnel failed, response 403 000
+https://raw.githubusercontent.com/               curl: (56) CONNECT tunnel failed, response 403 000
+https://reservoir.lean-lang.org/                 curl: (56) CONNECT tunnel failed, response 403 000
+https://api.github.com/                          200
+## git over https to github.com
+56a005855ea17e0b0958f73ec801ae140b0a1679	refs/tags/v4.35.0
+## elan toolchain install attempt (elan 4.2.4 was fetched from GitHub releases during probing)
+error: error during download
+info: caused by: [56] Failure when receiving data from the peer (CONNECT tunnel failed, response 403)
+   0: <error_chain::backtrace::imp::InternalBacktrace>::new
+## proxy record of the denied hosts
+['lakecache.blob.core.windows.net:443', 'palomar-registry.org:443', 'raw.githubusercontent.com:443', 'release.lean-lang.org:443', 'releases.lean-lang.org:443', 'reservoir.lean-lang.org:443', 'submit.palomar-registry.org:443']

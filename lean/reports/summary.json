@@ -1,0 +1,197 @@
+{
+ "date_utc": "2026-11-17T14:46:00Z",
+ "evidence_directory": "logs/verify-20261117T144600Z",
+ "git_commit": null,
+ "git_commit_note": "No git repository and no remote existed when the checks ran; the commit to submit must be verified again from a fresh clone (docs/PUSH_AND_SUBMIT.md).",
+ "source_tree_sha256": "9b6ed27731531efe1adc6f0f4e1fe2016a7fadb591e575ceae93672816640702",
+ "article_sha256": "4fa533f0b12af1a9668fa3f0f196ada8bc58778b3de3d88e86108da095804ca7",
+ "challenge_sha256": "aeb2634c1de95b9177f2e8676eb75ac99a8d73bae374d105f34737a9bfbeb606",
+ "solution_sha256": "6dbc380f6851f4c27d31399e85fb2c26becbbdd27fae31cba9ec66326de27c09",
+ "toolchain": "leanprover/lean4:v4.35.0-rc2",
+ "lean_version": "Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)",
+ "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+ "bundled_checker_sha256": {
+  "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+  "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+  "leanexport": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+  "leanchecker": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+  "leanchecker-paranoid": "ccd20c9ba4ad795e0969b9cd2dc386e58e4d885f7dcde6ce9d32101634ccb744",
+  "lean4lean": "baaec030a70c78562ced2c75866ab0d2410e81ce680b835179ed16570ad5ef97",
+  "nanoda_bin": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8",
+  "con-leche": "a6380d68b4fb364189821dd4692569c11536de0a1e3aaefea06028c0d67bb193",
+  "con-ron": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef"
+ },
+ "bwrap": "absent",
+ "status": {
+  "lean_build_passed": true,
+  "comparator_passed": true,
+  "comparator_passed_sandboxed": false,
+  "independent_kernel_checks_passed": false,
+  "independent_kernel_checks_sandboxed": false,
+  "independent_kernel_checks_detail": "Comparator --paranoid on the Solution closure: Lean paranoid, lean4lean, nanoda, con-leche, con-ron and the default kernel all accepted (unsandboxed). lake check --paranoid on the whole project export (296,805 declarations): accepted by Lean paranoid, lean4lean, con-leche, con-ron, Lean default; nanoda was killed with exit code 137 (out of memory: the workspace has about 8 GB RAM and no swap), so this step FAILED and is reported as not passed.",
+  "locally_prepared_for_submission": false,
+  "locally_prepared_for_submission_reason": "sandboxed checks not run on the exact commit to be submitted; no remote; CONFIRM fields of formalization.yaml unconfirmed",
+  "registered_by_palomar": false
+ },
+ "checks": {
+  "0_static_sources": {
+   "result": "passed",
+   "step": "00-sources"
+  },
+  "1_clean_build": {
+   "result": "passed",
+   "note": "project build directory deleted first; Mathlib build products reused"
+  },
+  "2_axiom_audit": {
+   "result": "passed",
+   "declarations": 136,
+   "allowed": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+   ]
+  },
+  "3_comparator": {
+   "result": "passed_unsandboxed",
+   "sandboxed": false,
+   "step": "03-comparator-NOSANDBOX",
+   "note": "bwrap not installed; run with --inadvisably-no-sandbox"
+  },
+  "4_lake_check_kernel_replay": {
+   "result": "passed_unsandboxed",
+   "sandboxed": false,
+   "step": "04-check-NOSANDBOX",
+   "note": "bwrap not installed; run with --inadvisably-no-sandbox"
+  },
+  "5_paranoid_mode_including_nanoda": {
+   "lake_check_paranoid": {
+    "result": "failed_unsandboxed",
+    "sandboxed": false,
+    "step": "05-check-paranoid-NOSANDBOX",
+    "note": "bwrap not installed; run with --inadvisably-no-sandbox"
+   },
+   "comparator_paranoid": {
+    "result": "passed_unsandboxed",
+    "sandboxed": false,
+    "step": "06-comparator-paranoid-NOSANDBOX",
+    "note": "bwrap not installed; run with --inadvisably-no-sandbox"
+   },
+   "note": "Lake's --paranoid runs leanchecker-paranoid, lean4lean, nanoda, con-leche, con-ron; NanoDa has no paranoid flag of its own"
+  },
+  "6_con_ron": {
+   "result": "see 5 and 7",
+   "note": "bundled con-ron ran inside 5 and as an external kernel in 7; Palomar's pinned v4.36.0-rc1 con-ron was not available offline and was not run"
+  },
+  "7_palomar_local_equivalent": {
+   "result": "passed_unsandboxed",
+   "sandboxed": false,
+   "step": "07-palomar-local-NOSANDBOX",
+   "note": "bwrap not installed; run with --inadvisably-no-sandbox"
+  },
+  "negative_controls_rejected": {
+   "sorry_in_solution": true,
+   "changed_definition_in_challenge": true
+  }
+ },
+ "compared_theorems": [
+  "MosaicSpaces.Paper.prop_2_3_t1",
+  "MosaicSpaces.Paper.lemma_2_4",
+  "MosaicSpaces.Paper.cor_2_6_union",
+  "MosaicSpaces.Paper.prop_2_7",
+  "MosaicSpaces.Paper.prop_2_7_t2",
+  "MosaicSpaces.Paper.prop_2_7_open",
+  "MosaicSpaces.Paper.lemma_2_8",
+  "MosaicSpaces.Paper.cor_2_9_1",
+  "MosaicSpaces.Paper.cor_2_9_2",
+  "MosaicSpaces.Paper.cor_2_9_2_path",
+  "MosaicSpaces.Paper.cor_2_9_qc",
+  "MosaicSpaces.Paper.display_2_1",
+  "MosaicSpaces.Paper.arc_theorem",
+  "MosaicSpaces.Paper.cor_2_6_2_arc",
+  "MosaicSpaces.Paper.display_2_1_iff",
+  "MosaicSpaces.Paper.prop_2_12",
+  "MosaicSpaces.Paper.prop_2_13",
+  "MosaicSpaces.Paper.lemma_2_14",
+  "MosaicSpaces.Paper.def_2_1_mosaic",
+  "MosaicSpaces.Paper.def_2_1_mContinuum",
+  "MosaicSpaces.Paper.def_2_1_quasiCurve",
+  "MosaicSpaces.Paper.def_2_1_curve",
+  "MosaicSpaces.Paper.lemma_2_2",
+  "MosaicSpaces.Paper.prop_2_3_1",
+  "MosaicSpaces.Paper.cor_2_9_2_full",
+  "MosaicSpaces.Paper.prop_2_10",
+  "MosaicSpaces.Paper.lemma_2_14_article",
+  "MosaicSpaces.Paper.cor_2_15",
+  "MosaicSpaces.Paper.compact_locallyConnected_lpc",
+  "MosaicSpaces.Paper.peano_classical",
+  "MosaicSpaces.Paper.quasiPeano_components",
+  "MosaicSpaces.Paper.lemma_2_2_closed",
+  "MosaicSpaces.Paper.lemma_2_2_finite",
+  "MosaicSpaces.Paper.prop_2_3_3",
+  "MosaicSpaces.Paper.prop_2_3_456",
+  "MosaicSpaces.Paper.remark_2_5",
+  "MosaicSpaces.Paper.cor_2_6_2",
+  "MosaicSpaces.Paper.cor_2_6_3",
+  "MosaicSpaces.Paper.prop_2_10_quotient",
+  "MosaicSpaces.Paper.remark_3_7",
+  "MosaicSpaces.Paper.exists_madFamily",
+  "MosaicSpaces.Paper.theorem_4_11",
+  "MosaicSpaces.Paper.answer_Q3",
+  "MosaicSpaces.Paper.fan_metric",
+  "MosaicSpaces.Paper.sec_5_1_translation",
+  "MosaicSpaces.Paper.lemma_5_2",
+  "MosaicSpaces.Paper.lemma_6_1",
+  "MosaicSpaces.Paper.theorem_6_3_1",
+  "MosaicSpaces.Paper.theorem_6_3_2",
+  "MosaicSpaces.Paper.theorem_6_3_3",
+  "MosaicSpaces.Paper.theorem_6_3_5",
+  "MosaicSpaces.Paper.answer_Q2",
+  "MosaicSpaces.Paper.answer_Q1b",
+  "MosaicSpaces.Paper.answer_Q1a",
+  "MosaicSpaces.Paper.theorem_6_3_4",
+  "MosaicSpaces.Paper.prop_6_2_1",
+  "MosaicSpaces.Paper.prop_6_2_2",
+  "MosaicSpaces.Paper.prop_6_2_3",
+  "MosaicSpaces.Paper.theorem_6_3_5_sep",
+  "MosaicSpaces.Paper.prop_7_1",
+  "MosaicSpaces.Paper.prop_7_2_path",
+  "MosaicSpaces.Paper.prop_7_2",
+  "MosaicSpaces.Paper.theorem_7_4_impl",
+  "MosaicSpaces.Paper.theorem_7_4_strict_H_LmS",
+  "MosaicSpaces.Paper.theorem_7_4_firstCountable",
+  "MosaicSpaces.Paper.theorem_7_4_lac",
+  "MosaicSpaces.Paper.theorem_7_4_firstCountable_lac",
+  "MosaicSpaces.Paper.prop_7_1_tail",
+  "MosaicSpaces.Paper.prop_7_2_tail",
+  "MosaicSpaces.Paper.theorem_7_4_strict_LAC_H"
+ ],
+ "ledger_status_counts": {
+  "compared": 59,
+  "documentation": 5,
+  "partial": 5,
+  "proved": 13,
+  "not-formalized": 23,
+  "blocked": 1
+ },
+ "answers": {
+  "Q1a": "answered (negative) via the cone over G; compared: MosaicSpaces.Paper.answer_Q1a",
+  "Q1b": "answered (negative) via the cone over G; compared: MosaicSpaces.Paper.answer_Q1b",
+  "Q2": "answered (negative) exactly as asked; compared: MosaicSpaces.Paper.answer_Q2",
+  "Q3": "NOT answered as asked; only the locally path connected form is proved: MosaicSpaces.Paper.answer_Q3_path"
+ },
+ "review": {
+  "ai_adversarial_review": "reports/ai_adversarial_review.md (separate Claude agent, fresh context, read-only; not a human review)",
+  "human_review": "none"
+ },
+ "models": {
+  "article": [
+   "Claude Fable 5.2",
+   "ChatGPT Astra"
+  ],
+  "formalization": [
+   "Claude Fable 5.2 (preparation session)",
+   "Claude Opus 5.5 (2026-11-16/17 session)"
+  ],
+  "review_agent": "Claude Opus 5.5 subagent"
+ }
+}
