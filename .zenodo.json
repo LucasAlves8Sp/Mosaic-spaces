@@ -29,6 +29,11 @@
       "identifier": "https://github.com/LucasAlves8Sp/Mosaic-spaces",
       "relation": "isSupplementedBy",
       "scheme": "url"
+    },
+    {
+      "identifier": "https://aixiv.online/abs/2611.02025",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
     }
   ]
 }
